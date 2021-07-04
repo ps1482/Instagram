@@ -1,0 +1,3 @@
+This is a automated bot for Instagram for viewing all the posts of any celebrity or anyone
+with a public account,
+This bot goes to the  instructed profile and  views all the pics one bye one .....
