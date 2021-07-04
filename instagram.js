@@ -38,11 +38,28 @@ async function init() {
     })
      
 
-    // code not working properly
+     
 
-    await page.waitForSelector('.G_hoz.LcKDX')
+    // await page.waitForSelector('.G_hoz.LcKDX')
+    // await page.evaluate(() => {
+    //     let selector =  document.querySelectorAll('.G_hoz.LcKDX');
+    //     selector.click();
+    // })
+
+    // ._65Bje.coreSpriteRightPaginationArrow
+    setInterval(async function(){
+      await page.waitForSelector('._65Bje.coreSpriteRightPaginationArrow')
     await page.evaluate(() => {
-        let selector =  document.querySelectorAll('.G_hoz.LcKDX');
+        let selector =  document.querySelector('._65Bje.coreSpriteRightPaginationArrow');
+        selector.click();
+    })
+      }, 3000);
+
+
+
+    await page.waitForSelector('._65Bje.coreSpriteRightPaginationArrow')
+    await page.evaluate(() => {
+        let selector =  document.querySelector('._65Bje.coreSpriteRightPaginationArrow');
         selector.click();
     })
 
