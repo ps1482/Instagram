@@ -19,12 +19,10 @@ async function init() {
     await Promise.all([
         page.waitForNavigation({ waitUntil: "networkidle2" }),
         page.click("button[type='submit']"),
-    ]);
-
+    ]); 
     
     await page.type("input[placeholder='Search']", "ronaldo");
-
-
+ 
     await page.waitForSelector('[role="none"]>a')
     await page.evaluate(() => {
         let selector =  document.querySelectorAll('[role="none"]>a')[0];
@@ -35,9 +33,8 @@ async function init() {
     await page.evaluate(() => {
         let selector =  document.querySelectorAll('._9AhH0')[0];
         selector.click();
-    })
-     
- 
+    }) 
+
     setInterval(async function(){
       await page.waitForSelector('._65Bje.coreSpriteRightPaginationArrow')
     await page.evaluate(() => {
@@ -45,15 +42,11 @@ async function init() {
         selector.click();
     })
       }, 3000);
-
-
-
+ 
     await page.waitForSelector('._65Bje.coreSpriteRightPaginationArrow')
     await page.evaluate(() => {
         let selector =  document.querySelector('._65Bje.coreSpriteRightPaginationArrow');
         selector.click();
-    })
-
-
+    }) 
 } 
 init();
